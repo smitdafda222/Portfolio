@@ -1,0 +1,150 @@
+.projects-page {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 180px);
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.projects-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.glass-input {
+  padding: 0.8rem 1.2rem;
+  width: 300px;
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--orange-primary);
+  box-shadow: 0 0 0 3px rgba(255, 101, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .glass-input:focus {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.repo-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.repo-card h3 a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.repo-card h3 a:hover {
+  color: var(--orange-primary);
+}
+
+.repo-desc {
+  color: var(--text-color);
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.repo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.repo-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.repo-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* Spinner */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+.spinner {
+  border: 3px solid var(--glass-border);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left-color: var(--orange-primary);
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message, .no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.error-message p {
+  color: #ff3b30;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .projects-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .glass-input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,116 @@
+.contact-page {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: calc(100vh - 180px);
+}
+
+.contact-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-form, .live-preview {
+  flex: 1;
+  min-width: 320px;
+  padding: 2.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .form-group input, 
+body.dark-mode .form-group textarea {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--orange-primary);
+  box-shadow: 0 0 0 3px rgba(255, 101, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-mode .form-group input:focus, 
+body.dark-mode .form-group textarea:focus {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+.live-preview {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-preview h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--orange-primary);
+  font-size: 1.3rem;
+}
+
+.preview-box {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  border: 1px dashed var(--glass-border);
+  min-height: 200px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: var(--text-color);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+body.dark-mode .preview-box {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.placeholder-text {
+  color: var(--text-color);
+  opacity: 0.5;
+  font-style: italic;
+}
